@@ -10,11 +10,12 @@ declare(strict_types=1);
 namespace CarlosChininin\ApiBundle;
 
 use CarlosChininin\ApiBundle\Response\ResponseDto;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-abstract class AbstractApiController
+abstract class AbstractApi extends AbstractController
 {
     protected function response(array $data, bool $status = true): Response
     {

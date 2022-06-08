@@ -8,7 +8,7 @@ use CarlosChininin\ApiBundle\Exception\AccessDeniedException;
 use CarlosChininin\ApiBundle\Response\ResponseDto;
 use Symfony\Component\HttpFoundation\Request;
 
-abstract class AbstractAuthApiController extends AbstractApiController
+abstract class AbstractAuthApi extends AbstractApi
 {
     protected function authorization(Request $request, string $tokenValid): ResponseDto
     {

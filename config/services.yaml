@@ -6,16 +6,6 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 #        public: true        # Makes your services public.
 
-#    _instanceof:
-#        CarlosChininin\ApiBundle\AbstractApi:
-#            tags: [ 'carloschininin.api' ]
-#        CarlosChininin\ApiBundle\AbstractAuthApi:
-#            tags: [ 'api.abstract_api' ]
-
-#    CarlosChininin\ApiBundle\:
-#        resource: '../src/'
-#        exclude:
-#            - '../src/DependencyInjection/'
-#            - '../src/CarlosChinininAppBundle.php'
-    CarlosChininin\ApiBundle\AbstractApiController:
-        tags: ['controller.service_arguments']
+    _instanceof:
+        CarlosChininin\ApiBundle\AbstractApi:
+            tags: [ 'carloschininin.api_service' ]
