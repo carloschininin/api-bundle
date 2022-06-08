@@ -11,8 +11,10 @@ services:
         CarlosChininin\ApiBundle\AbstractAuthApi:
             tags: [ 'controller.service_arguments' ]
 
-    CarlosChininin\ApiBundle\:
-        resource: '../src/'
-        exclude:
-            - '../src/DependencyInjection/'
-            - '../src/CarlosChinininAppBundle.php'
+#    CarlosChininin\ApiBundle\:
+#        resource: '../src/'
+#        exclude:
+#            - '../src/DependencyInjection/'
+#            - '../src/CarlosChinininAppBundle.php'
+    CarlosChininin\ApiBundle\AbstractApi:
+        arguments: [ !tagged controller.service_arguments ]
