@@ -13,7 +13,6 @@ use CarlosChininin\ApiBundle\Response\ResponseDto;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use function is_array;
 
 abstract class AbstractApi
 {
@@ -31,7 +30,7 @@ abstract class AbstractApi
     {
         if (0 === mb_strpos($request->headers->get('Content-Type'), 'application/json')) {
             $content = json_decode($request->getContent(), true);
-            $request->request->replace(is_array($content) ? $content : []);
+            $request->request->replace(\is_array($content) ? $content : []);
         }
 
         return $request->request->all();
