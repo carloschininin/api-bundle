@@ -15,7 +15,7 @@
         "ext-mbstring": "*",
         "ext-gd": "*",
         "carloschininin/app-util": "dev-main",
-        "symfony/framework-bundle": "^6.1",
+        "symfony/dependency-injection": "^6.1",
         "symfony/http-foundation": "^6.1",
         "symfony/http-kernel": "^6.1"
     },
