@@ -12,7 +12,7 @@ class ApiExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-        $container->registerForAutoconfiguration(AbstractApi::class)
-            ->addTag('controller.service_arguments');
+//        $container->registerForAutoconfiguration(AbstractApi::class)
+//            ->addTag('controller.service_arguments');
     }
 }
