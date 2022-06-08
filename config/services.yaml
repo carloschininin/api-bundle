@@ -4,18 +4,18 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-        public: true        # Makes your services public.
-#
+#        public: true        # Makes your services public.
+
 #    _instanceof:
 #        CarlosChininin\ApiBundle\AbstractApi:
-#            tags: [ 'controller.service_arguments' ]
+#            tags: [ 'carloschininin.api' ]
 #        CarlosChininin\ApiBundle\AbstractAuthApi:
-#            tags: [ 'controller.service_arguments' ]
+#            tags: [ 'api.abstract_api' ]
 
-    CarlosChininin\ApiBundle\:
-        resource: '../src/'
-        exclude:
-            - '../src/DependencyInjection/'
-            - '../src/CarlosChinininAppBundle.php'
-#    CarlosChininin\ApiBundle\AbstractApi:
-#        arguments: [ !tagged controller.service_arguments ]
+#    CarlosChininin\ApiBundle\:
+#        resource: '../src/'
+#        exclude:
+#            - '../src/DependencyInjection/'
+#            - '../src/CarlosChinininAppBundle.php'
+    CarlosChininin\ApiBundle\AbstractApi:
+        tags: ['controller.service_arguments']
