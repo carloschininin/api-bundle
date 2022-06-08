@@ -17,7 +17,7 @@ class ControllersAsServices implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         foreach ($container->getDefinitions() as $definition) {
-            if (false === mb_strpos($definition->getClass(), 'Api')) {
+            if (null === $definition->getClass() || false === mb_strpos($definition->getClass(), 'Api')) {
                 continue;
             }
 
