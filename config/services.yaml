@@ -6,5 +6,6 @@ services:
 #            tags: [ 'carloschininin.api_service' ]
 
     CarlosChininin\ApiBundle\AbstractApi:
-        public: true
+        tags: [ 'carloschininin.api_service' ]
+    CarlosChininin\ApiBundle\AbstractAuthApi:
         tags: [ 'carloschininin.api_service' ]
