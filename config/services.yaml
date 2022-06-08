@@ -17,5 +17,5 @@ services:
 #        exclude:
 #            - '../src/DependencyInjection/'
 #            - '../src/CarlosChinininAppBundle.php'
-    CarlosChininin\ApiBundle\AbstractApi:
+    CarlosChininin\ApiBundle\AbstractApiController:
         tags: ['controller.service_arguments']

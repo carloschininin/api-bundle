@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-abstract class AbstractApi
+abstract class AbstractApiController
 {
     protected function response(array $data, bool $status = true): Response
     {
