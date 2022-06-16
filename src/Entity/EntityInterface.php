@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CarlosChininin\ApiBundle\Entity;
 
-use CarlosChininin\AppUtil\Dto\AbstractDto;
+use CarlosChininin\ApiBundle\Dto\AbstractDto;
 
 interface EntityInterface
 {
