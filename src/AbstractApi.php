@@ -16,9 +16,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 abstract class AbstractApi
 {
-    protected function response(array $data, bool $status = true): Response
+    protected function response(iterable $data, bool $status = true): Response
     {
-        return new JsonResponse(array_merge(['status' => $status], $data), Response::HTTP_OK);
+        return new JsonResponse(array_merge(['status' => $status], (array) $data), Response::HTTP_OK);
     }
 
     protected function responseDto(ResponseDto $response): Response

@@ -15,12 +15,12 @@ class ResponseDto extends AbstractDto
 {
     protected function __construct(
         private readonly bool $status,
-        private readonly array $data = [],
+        private readonly iterable $data,
         private readonly ?string $message = null,
     ) {
     }
 
-    public static function create(bool $status, array $data = [], ?string $message = null): self
+    public static function create(bool $status, iterable $data = [], ?string $message = null): self
     {
         return new self($status, $data, $message);
     }
@@ -30,7 +30,7 @@ class ResponseDto extends AbstractDto
         return $this->status;
     }
 
-    public function data(): array
+    public function data(): iterable
     {
         return $this->data;
     }
