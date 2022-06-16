@@ -24,9 +24,9 @@ abstract class AbstractEntity implements EntityInterface
 
     public function dataDto(AbstractDto $dto): void
     {
-        $dto->uid = (string) $this->uid();
-        $dto->userCreated = (string) $this->userCreated();
-        $dto->userUpdated = (string) $this->userUpdated();
+        $dto->uid = $this->uid()?->toBase32();
+        $dto->userCreated = $this->userCreated()?->toBase32();
+        $dto->userUpdated = $this->userUpdated()?->toBase32();
         $dto->isActive = $this->isActive();
         $dto->createdAt = $this->createdAt()?->format('Y-m-d H:i:s');
         $dto->updatedAt = $this->updatedAt()?->format('Y-m-d H:i:s');
